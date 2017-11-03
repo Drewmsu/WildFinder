@@ -28,26 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbHabitat = new System.Windows.Forms.CheckBox();
             this.btnConsult = new System.Windows.Forms.Button();
             this.tbInput = new System.Windows.Forms.TextBox();
             this.lbConsult = new System.Windows.Forms.ListBox();
-            this.cb3 = new System.Windows.Forms.CheckBox();
-            this.cb2 = new System.Windows.Forms.CheckBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.cbInferencias = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // cbHabitat
-            // 
-            this.cbHabitat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHabitat.AutoSize = true;
-            this.cbHabitat.Location = new System.Drawing.Point(23, 82);
-            this.cbHabitat.Name = "cbHabitat";
-            this.cbHabitat.Size = new System.Drawing.Size(60, 17);
-            this.cbHabitat.TabIndex = 56;
-            this.cbHabitat.Text = "Habitat";
-            this.cbHabitat.UseVisualStyleBackColor = true;
             // 
             // btnConsult
             // 
@@ -66,7 +52,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbInput.Location = new System.Drawing.Point(23, 129);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(151, 20);
+            this.tbInput.Size = new System.Drawing.Size(196, 20);
             this.tbInput.TabIndex = 54;
             // 
             // lbConsult
@@ -78,30 +64,6 @@
             this.lbConsult.Name = "lbConsult";
             this.lbConsult.Size = new System.Drawing.Size(515, 199);
             this.lbConsult.TabIndex = 53;
-            // 
-            // cb3
-            // 
-            this.cb3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb3.AutoSize = true;
-            this.cb3.Location = new System.Drawing.Point(260, 82);
-            this.cb3.Name = "cb3";
-            this.cb3.Size = new System.Drawing.Size(80, 17);
-            this.cb3.TabIndex = 52;
-            this.cb3.Text = "checkBox3";
-            this.cb3.UseVisualStyleBackColor = true;
-            // 
-            // cb2
-            // 
-            this.cb2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb2.AutoSize = true;
-            this.cb2.Location = new System.Drawing.Point(135, 82);
-            this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(80, 17);
-            this.cb2.TabIndex = 51;
-            this.cb2.Text = "checkBox2";
-            this.cb2.UseVisualStyleBackColor = true;
             // 
             // lblTitle
             // 
@@ -115,17 +77,26 @@
             this.lblTitle.TabIndex = 50;
             this.lblTitle.Text = "WILD FINDER";
             // 
+            // cbInferencias
+            // 
+            this.cbInferencias.FormattingEnabled = true;
+            this.cbInferencias.Items.AddRange(new object[] {
+            "Animals according to habitat",
+            "Biomes according to habitas"});
+            this.cbInferencias.Location = new System.Drawing.Point(22, 102);
+            this.cbInferencias.Name = "cbInferencias";
+            this.cbInferencias.Size = new System.Drawing.Size(197, 21);
+            this.cbInferencias.TabIndex = 56;
+            // 
             // AnimalsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 418);
-            this.Controls.Add(this.cbHabitat);
+            this.Controls.Add(this.cbInferencias);
             this.Controls.Add(this.btnConsult);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.lbConsult);
-            this.Controls.Add(this.cb3);
-            this.Controls.Add(this.cb2);
             this.Controls.Add(this.lblTitle);
             this.Name = "AnimalsForm";
             this.Text = "Wild Finder";
@@ -136,14 +107,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox cbHabitat;
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.TextBox tbInput;
         private System.Windows.Forms.ListBox lbConsult;
-        private System.Windows.Forms.CheckBox cb3;
-        private System.Windows.Forms.CheckBox cb2;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.ComboBox cbInferencias;
     }
 }
 

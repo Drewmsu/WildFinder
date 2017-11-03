@@ -21,6 +21,7 @@ namespace WildFinder
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
+            PlQuery query;
             var value = tbInput.Text;
             lbConsult.Items.Clear();
             var load = new PlQuery("load('animals.bd')");
@@ -34,12 +35,20 @@ namespace WildFinder
                 Debug.WriteLine(exception.StackTrace);
             }
 
-            if (cbHabitat.Checked)
+            switch (cbInferencias.SelectedIndex)
             {
-                var consulta1 = new PlQuery("lives_in(" + value + ",Animal)");
-                foreach (var z in consulta1.SolutionVariables)
-                    lbConsult.Items.Add(z["Animal"].ToString());
+                case 0:
+                    query = new PlQuery("lives_in(" + value + ",Animal)");
+                    foreach (var q in query.SolutionVariables)
+                        lbConsult.Items.Add(q["Animal"].ToString());
+                    break;
+                case 1:
+                    query = new PlQuery("habitat_type(" + value + ",Biome)");
+                    foreach (var q in query.SolutionVariables)
+                        lbConsult.Items.Add(q["Biome"].ToString());
+                    break;
             }
+            
         }
     }
 }
