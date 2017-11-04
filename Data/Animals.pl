@@ -3,6 +3,7 @@
 :- dynamic habitat_biome/2.
 :- dynamic habitat_class/2.
 :- dynamic animal_enemy/2.
+:- dynamic animal_biome/2.
 
 %ANIMAL_HABITAT
 animal_habitat(frog_bull,aquatic).
@@ -143,6 +144,187 @@ animal_habitat(chameleon_madagascar,terrestrial).
 animal_habitat(cobra_indian,terrestrial).
 animal_habitat(rocodile_saltwater,marine).
 animal_habitat(gila_monster,terrestrial).
+
+%ANIMAL_BIOME
+animal_biome(seal_fur, arctic	).
+animal_biome(penguin_adelie,	arctic_waters	).
+animal_biome(bat_little_brown,	barns 	).
+animal_biome(bat_little_brown,	bcaves	).
+animal_biome(manatee,	bays	).
+animal_biome(flounder_winter,	bays_shallow	).
+animal_biome(stickleback_three_spine,	brooks	).
+animal_biome(fox_arctic	,	coastline_arctic	).
+animal_biome(cod_atlantic,	coastline_atlantic	).
+animal_biome(gila_monster,	desert	).
+animal_biome(ostrich,	desert_africa	).
+animal_biome(camel,	desert_africa ).
+animal_biome(camel,	mid_east_asia).
+animal_biome(cat_domestic,	domestic	).
+animal_biome(chicken,	domestic	).
+animal_biome(dog_boston_terrier	,	domestic	).
+animal_biome(dog_collie,	domestic	).
+animal_biome(dog_foxhound	,	domestic	).
+animal_biome(dog_irish_terrier	,	domestic	).
+animal_biome(dog_pekingese	,	domestic	).
+animal_biome(dog_pointer	,	domestic	).
+animal_biome(dog_saint_bernard	,	domestic	).
+animal_biome(dog_whippet	,	domestic	).
+animal_biome(donkey	,	domestic	).
+animal_biome(goat_milch	,	domestic	).
+animal_biome(guinea_pig	,	domestic	).
+animal_biome(horse	,	domestic	).
+animal_biome(mule	,	domestic	).
+animal_biome(rabbit_domestic	,	domestic	).
+animal_biome(sheep	,	domestic	).
+animal_biome(vulture_turkey	,	fields_open	).
+animal_biome(shrew_musked	,	forest).
+animal_biome(shrew_musked	, brushland	).
+animal_biome(bear_grizzly	,	forest_coniferous	).
+animal_biome(squirrel_gray	,	forest_pine ).
+animal_biome(squirrel_gray	,	forest_hardwood ).
+animal_biome(squirrel_gray	,	trees_nut).
+animal_biome(squirrel_gray	,	river_bottoms	).
+animal_biome(frog_cuban	,	forest_rain	).
+animal_biome(deer_white_tailed	,	forests	).
+animal_biome(deer_white_tailed	,	swamps	).
+animal_biome(deer_white_tailed	,	brushland	).
+animal_biome(chipmunk_eastern	,	forests_deciduous ).
+animal_biome(chipmunk_eastern	,   brushland	).
+animal_biome(chameleon_madagascar	,	forest_tropical	).
+animal_biome(bat_flying_fox	,	forest_tropical_central_africa	).
+animal_biome(hummingbird_cuban_bee	,	forest_tropical_rain	).
+animal_biome(tapir	,	forest_tropical_rain	).
+animal_biome(cow	,	grassland	).
+animal_biome(kestrel_lesser	,	grassland	).
+animal_biome(pheasant_ringnecked	,	grassland	).
+animal_biome(pig	,	grassland	).
+animal_biome(quail_japanese_european	,	grassland	).
+animal_biome(woodchuck	,	grassland	).
+animal_biome(groundhog	,	grassland	).
+animal_biome(quail_bobwhite	,	grassland	).
+animal_biome(quail_bobwhite	,	brushland	).
+animal_biome(weasel_least	,	grassland	).
+animal_biome(weasel_least	,	brushland ).
+animal_biome(weasel_least	,	forest_deciduous	).
+animal_biome(kangaroo_red	,	grassland ).
+animal_biome(kangaroo_red	,	brushland_australia	).
+animal_biome(shrew_dwarf	,	grassland	).
+animal_biome(shrew_dwarf	,	woodland	).
+animal_biome(elephant_african	,	grassland_africa	).
+animal_biome(giraffe_male	,	grassland_africa	).
+animal_biome(giraffe_male	,   dry_savannahs	).
+animal_biome(lion	,	grassland_africa ).
+animal_biome(lion	,   forest_india	).
+animal_biome(armadillo_nine_banded	,	grassland_southern	).
+animal_biome(elephant_indian	,	jungles	).
+animal_biome(elephant_indian	,	grasslands_tropical_asia	).
+animal_biome(bullhead_brown	,	lakes	).
+animal_biome(molly	,	lakes	).
+animal_biome(frog_bull	,	lakes	).
+animal_biome(frog_bull	,	ponds	).
+animal_biome(carp	,	rivers	).
+animal_biome(carp	,	lakes ).
+animal_biome(swordtail_mexican	,	lakes 	).
+animal_biome(swordtail_mexican	,	rivers	).
+animal_biome(perch	,	lakes	).
+animal_biome(perch	,	streams	).
+animal_biome(mink_american	,	lakes_banks	).
+animal_biome(mink_american	,   streams_banks	).
+animal_biome(pike_northern	,	lakes_in_america	).
+animal_biome(frog_leopard	,	marshes ).
+animal_biome(frog_leopard	,	ponds ).
+animal_biome(frog_leopard	,	fields_open	).
+animal_biome(toad_american	,	moist_areas ).
+animal_biome(toad_american	,	gardens	).
+animal_biome(falcon_peregrin	,	mountains ).
+animal_biome(falcon_peregrin	,	plains	).
+animal_biome(sea_lamprey	,	ocean ).
+animal_biome(sea_lamprey	,	lakes	).
+animal_biome(salmon_chum	,	ocean ).
+animal_biome(salmon_chum	,	rivers	).
+animal_biome(herring_atlantic	,	ocean_atlantic	).
+animal_biome(dolphin_bottlenose	,	ocean_coast	).
+animal_biome(haddock	,	ocean_open	).
+animal_biome(shark_hammerhead	,	ocean_open	).
+animal_biome(shark_whale	,	ocean_open	).
+animal_biome(whale_blue	,	ocean_open	).
+animal_biome(skate	,	ocean_open_water	).
+animal_biome(tuna	,	ocean_open_water	).
+animal_biome(mackerel_spanish	,	ocean_shoreline_atlantic	).
+animal_biome(dogfish_pacific_spiny	,	ocean_shores	).
+animal_biome(gull_herring	,	ocean_shores	).
+animal_biome(gull_herring	,	lake_shores	).
+animal_biome(sea_horse	,	oceans_temperate	).
+animal_biome(crocodile_saltwater	,	ocean_tropical	).
+animal_biome(crow_hooded	,	open_land	).
+animal_biome(european_jackdaw	,	open_land	).
+animal_biome(hawk_night	,	open_land	).
+animal_biome(robin	,	open_land	).
+animal_biome(rook	,	open_land	).
+animal_biome(starling_common	,	open_land	).
+animal_biome(kiwi	,	openland_new_zealand	).
+animal_biome(goldfish	,	ponds	).
+animal_biome(pumpkinseed	,	ponds	).
+animal_biome(pumpkinseed	,	streams	).
+animal_biome(guppy	,	rivers	).
+animal_biome(sturgeon_atlantic	,	rivers	).
+animal_biome(sturgeon_atlantic	,	lakes	).
+animal_biome(sturgeon_atlantic	,	ocean	).
+animal_biome(hellbender	,	rivers	).
+animal_biome(hellbender	,	streams	).
+animal_biome(gar_longnose	,	rivers_large	).
+animal_biome(bass_large_mouth_black	,	rivers_in_america	).
+animal_biome(bass_large_mouth_black	,	lakes_in_america	).
+animal_biome(beaver	,	rivers_north_america	).
+animal_biome(alligator_american	,	rivers_warm ).
+animal_biome(alligator_american	,	lakes_warm	).
+animal_biome(guinea_fowl	,	savanna	).
+animal_biome(trout_brown	,	streams	).
+animal_biome(bass_rock	,	streams	).
+animal_biome(bass_rock	,	lakes	).
+animal_biome(salamander_tiger	,	streams	).
+animal_biome(salamander_tiger	,	lakes	).
+animal_biome(eel_american	,	streams	).
+animal_biome(eel_american	,	ocean	).
+animal_biome(duck_mallard	,	ponds	).
+animal_biome(duck_mallard	,	streams	).
+animal_biome(duck_wood	,	streams	).
+animal_biome(duck_wood	,	ponds	).
+animal_biome(platypus_duck_billed	,	streams ).
+animal_biome(platypus_duck_billed	,	ponds_in_australia	).
+animal_biome(salamander_japanese	,	streams_near	).
+animal_biome(trout_rainbow	,	streams_near_sea	).
+animal_biome(fighting_fish_siamese	,	streams_tropical	).
+animal_biome(sting_ray	,	temperate_coast	).
+animal_biome(hamster	,	temperate_europe ).
+animal_biome(hamster	,	temperate_asia	).
+animal_biome(boa_constrictor	,	tropical_south_america	).
+animal_biome(goby_philippine	,	tropical_shores	).
+animal_biome(chameleon	,	tropics	).
+animal_biome(cobra_indian	,	tropics	).
+animal_biome(bear_american_black	,	tundra ).
+animal_biome(bear_american_black	,	forest	).
+animal_biome(mouse_house	,	where_man_is_found	).
+animal_biome(rat_norway	,	where_man_is_found	).
+animal_biome(pigeon	,	where_man_is_found ).
+animal_biome(pigeon	,	fields	).
+animal_biome(dog_basset_hound	,	woodland	).
+animal_biome(dog_beagle	,	woodland	).
+animal_biome(dog_fox_terrier	,	woodland	).
+animal_biome(hummingbird	,	woodland	).
+animal_biome(magpie_black-billed	,	woodland	).
+animal_biome(nutria	,	woodland	).
+animal_biome(opossum_large_american	,	woodland	).
+animal_biome(porcupine	,	woodland	).
+animal_biome(turkey	,	woodland	).
+animal_biome(mouse_white_footed	,	woodland	).
+animal_biome(mouse_white_footed	,	brushland	).
+animal_biome(buzzard	,	woodland	).
+animal_biome(buzzard	,	grassland	).
+animal_biome(goshawk	,	grassland	).
+animal_biome(goshawk	,	woodland ).
+animal_biome(canary	,	woodland_canary_islands	).
+animal_biome(human	,	almost_everywhere).
 
 %ANIMAL_CLASS
 animal_class(frog_bull,amphibia).
@@ -559,20 +741,21 @@ animal_enemy(dogfish_pacific_spiny,man).
 
 
 load(A):-
-exists_file(A),
-consult(A).
+	exists_file(A),
+	consult(A).
 
-lives_in(Habitat,Animal):-
-	animal_habitat(Animal,Habitat).
+lives_in(Habitat, Animal):-
+	animal_habitat(Animal, Habitat).
 
 habitat_type(Habitat,Biome):-
-	habitat_biome(Habitat,Biome).
+	habitat_biome(Habitat, Biome).
 
-biomes_of_animal(Animal):-
-	animal_habitat(Animal, Habitat),
-	habitat_biome(Habitat, Biome),
-	write(Biome).
+biomes_of_animal(Animal, Biome):-
+	animal_biome(Animal, Biome).
 	
-major_enemies(Animal):-
-	animal_enemy(Animal, Enemy),
-	write(Enemy).
+major_enemies(Animal, Enemy):-
+	animal_enemy(Animal, Enemy).
+
+live_together(AnimalA, AnimalB):-
+	biomes_of_animal(AnimalA,Biome),
+	biomes_of_animal(AnimalB,Biome).

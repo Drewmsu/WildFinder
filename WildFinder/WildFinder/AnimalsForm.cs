@@ -14,6 +14,7 @@ namespace WildFinder
 
         private void AnimalsForm_Load(object sender, EventArgs e)
         {
+            cbInferencias.SelectedIndex = 0;
             Environment.SetEnvironmentVariable("Path", @"C:\\Program Files (x86)\\swipl\\bin");
             String[] p = { "-q", "-f", @"Animals.pl" };
             PlEngine.Initialize(p);
@@ -24,7 +25,7 @@ namespace WildFinder
             PlQuery query;
             var value = tbInput.Text.ToLower();
             lbConsult.Items.Clear();
-            var load = new PlQuery("load('animals.bd')");
+            var load = new PlQuery("load('Animals.bd')");
             try
             {
                 load.NextSolution();
@@ -56,6 +57,11 @@ namespace WildFinder
                     query = new PlQuery("major_enemies(" + value + ",Enemy)");
                     foreach (var q in query.SolutionVariables)
                         lbConsult.Items.Add(q["Enemy"].ToString());
+                    break;
+                case 4:
+                    query = new PlQuery("live_together(" + value + ",AnimalB)");
+                    foreach (var q in query.SolutionVariables)
+                        lbConsult.Items.Add(q["AnimalB"].ToString());
                     break;
             }
             

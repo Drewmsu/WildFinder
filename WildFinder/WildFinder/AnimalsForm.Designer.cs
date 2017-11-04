@@ -102,7 +102,8 @@
             "Animals according to habitat",
             "Biomes according to habitat",
             "Biomes of animal",
-            "Enemy of animal"});
+            "Enemy of animal",
+            "Possible cohabitants of"});
             this.cbInferencias.Location = new System.Drawing.Point(126, 20);
             this.cbInferencias.Name = "cbInferencias";
             this.cbInferencias.Size = new System.Drawing.Size(178, 21);
