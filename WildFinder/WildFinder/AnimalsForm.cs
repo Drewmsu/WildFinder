@@ -22,7 +22,7 @@ namespace WildFinder
         private void btnConsult_Click(object sender, EventArgs e)
         {
             PlQuery query;
-            var value = tbInput.Text;
+            var value = tbInput.Text.ToLower();
             lbConsult.Items.Clear();
             var load = new PlQuery("load('animals.bd')");
             try
@@ -47,8 +47,23 @@ namespace WildFinder
                     foreach (var q in query.SolutionVariables)
                         lbConsult.Items.Add(q["Biome"].ToString());
                     break;
+                case 2:
+                    query = new PlQuery("biomes_of_animal(" + value + ",Biome)");
+                    foreach (var q in query.SolutionVariables)
+                        lbConsult.Items.Add(q["Biome"].ToString());
+                    break;
+                case 3:
+                    query = new PlQuery("major_enemies(" + value + ",Enemy)");
+                    foreach (var q in query.SolutionVariables)
+                        lbConsult.Items.Add(q["Enemy"].ToString());
+                    break;
             }
             
+        }
+
+        private void cbInferencias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
