@@ -434,6 +434,7 @@
             this.ClientSize = new System.Drawing.Size(709, 446);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AnimalsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wild Finder";

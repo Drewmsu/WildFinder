@@ -124,7 +124,7 @@ namespace WildFinder
                     PlQuery.PlCall("assert(animal_habitat(" + animal + "," + habitat + "))");
                     PlQuery.PlCall("assert(animal_biome(" + animal + "," + biome + "))");
                     PlQuery.PlCall("assert(animal_class(" + animal + "," + animalClass + "))");
-                    MessageBox.Show("Successfully Added");
+                    MessageBox.Show(@"Successfully Added");
                 }
                 catch (Exception exception)
                 {
@@ -155,7 +155,7 @@ namespace WildFinder
                 try
                 {
                     PlQuery.PlCall("assert(major_enemies(" + animal + "," + enemy + "))");
-                    MessageBox.Show("Successfully Added");
+                    MessageBox.Show(@"Successfully Added");
                 }
                 catch (Exception exception)
                 {
