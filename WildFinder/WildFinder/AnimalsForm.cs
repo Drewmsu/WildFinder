@@ -119,13 +119,49 @@ namespace WildFinder
                 txtHabitat.Text.Length != 0 &&
                 txtBiome.Text.Length != 0)
             {
-               
-                PlQuery.PlCall("assert(animal_habitat(" + animal + "," + habitat + ")");
-                PlQuery.PlCall("assert(animal_biome(" + animal + "," + biome + ")");
-                PlQuery.PlCall("assert(animal_class(" + animal + "," + animalClass + ")");
-                
+                try
+                {
+                    PlQuery.PlCall("assert(animal_habitat(" + animal + "," + habitat + "))");
+                    PlQuery.PlCall("assert(animal_biome(" + animal + "," + biome + "))");
+                    PlQuery.PlCall("assert(animal_class(" + animal + "," + animalClass + "))");
+                    MessageBox.Show("Successfully Added");
+                }
+                catch (Exception exception)
+                {
+                    Debug.WriteLine(exception.StackTrace);
+                }
             }
         }
 
+        private void btnAddEnemy_Click(object sender, EventArgs e)
+        {
+            var animal = txtExistingAnimal.Text.ToLower();
+            var enemy = txtNewEnemy.Text.ToLower();
+            var load = new PlQuery("load('Animals.bd')");
+
+            try
+            {
+                load.NextSolution();
+
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine(exception.StackTrace);
+            }
+
+            if (txtExistingAnimal.Text.Length != 0 &&
+                txtNewEnemy.Text.Length != 0)
+            {
+                try
+                {
+                    PlQuery.PlCall("assert(major_enemies(" + animal + "," + enemy + "))");
+                    MessageBox.Show("Successfully Added");
+                }
+                catch (Exception exception)
+                {
+                    Debug.WriteLine(exception.StackTrace);
+                }
+            }
+        }
     }
 }

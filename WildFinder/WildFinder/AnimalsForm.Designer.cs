@@ -424,6 +424,7 @@
             this.btnAddEnemy.TabIndex = 2;
             this.btnAddEnemy.Text = "Add";
             this.btnAddEnemy.UseVisualStyleBackColor = true;
+            this.btnAddEnemy.Click += new System.EventHandler(this.btnAddEnemy_Click);
             // 
             // AnimalsForm
             // 
