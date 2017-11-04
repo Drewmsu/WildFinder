@@ -22,7 +22,6 @@ namespace WildFinder
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
-            PlQuery query;
             var value = tbInput.Text.ToLower();
             lbConsult.Items.Clear();
             var load = new PlQuery("load('Animals.bd')");
@@ -35,36 +34,39 @@ namespace WildFinder
             {
                 Debug.WriteLine(exception.StackTrace);
             }
-
-            switch (cbInferencias.SelectedIndex)
+            if (tbInput.Text.Length != 0)
             {
-                case 0:
-                    query = new PlQuery("lives_in(" + value + ",Animal)");
-                    foreach (var q in query.SolutionVariables)
-                        lbConsult.Items.Add(q["Animal"].ToString());
-                    break;
-                case 1:
-                    query = new PlQuery("habitat_type(" + value + ",Biome)");
-                    foreach (var q in query.SolutionVariables)
-                        lbConsult.Items.Add(q["Biome"].ToString());
-                    break;
-                case 2:
-                    query = new PlQuery("biomes_of_animal(" + value + ",Biome)");
-                    foreach (var q in query.SolutionVariables)
-                        lbConsult.Items.Add(q["Biome"].ToString());
-                    break;
-                case 3:
-                    query = new PlQuery("major_enemies(" + value + ",Enemy)");
-                    foreach (var q in query.SolutionVariables)
-                        lbConsult.Items.Add(q["Enemy"].ToString());
-                    break;
-                case 4:
-                    query = new PlQuery("live_together(" + value + ",AnimalB)");
-                    foreach (var q in query.SolutionVariables)
-                        lbConsult.Items.Add(q["AnimalB"].ToString());
-                    break;
+                PlQuery query;
+                switch (cbInferencias.SelectedIndex)
+                {
+                    case 0:
+                        query = new PlQuery("lives_in(" + value + ",Animal)");
+                        foreach (var q in query.SolutionVariables)
+                            lbConsult.Items.Add(q["Animal"].ToString());
+                        break;
+                    case 1:
+                        query = new PlQuery("habitat_type(" + value + ",Biome)");
+                        foreach (var q in query.SolutionVariables)
+                            lbConsult.Items.Add(q["Biome"].ToString());
+                        break;
+                    case 2:
+                        query = new PlQuery("biomes_of_animal(" + value + ",Biome)");
+                        foreach (var q in query.SolutionVariables)
+                            lbConsult.Items.Add(q["Biome"].ToString());
+                        break;
+                    case 3:
+                        query = new PlQuery("major_enemies(" + value + ",Enemy)");
+                        foreach (var q in query.SolutionVariables)
+                            lbConsult.Items.Add(q["Enemy"].ToString());
+                        break;
+                    case 4:
+                        query = new PlQuery("live_together(" + value + ",AnimalB)");
+                        foreach (var q in query.SolutionVariables)
+                            lbConsult.Items.Add(q["AnimalB"].ToString());
+                        break;
+                }
             }
-            
+
         }
 
         private void cbInferencias_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,19 +74,19 @@ namespace WildFinder
             switch (cbInferencias.SelectedIndex)
             {
                 case 0:
-                    lblAux.Text = "Enter a habitat:";
+                    lblAux.Text = @"Enter a habitat:";
                     break;
                 case 1:
-                    lblAux.Text = "Enter a habitat:";
+                    lblAux.Text = @"Enter a habitat:";
                     break;
                 case 2:
-                    lblAux.Text = "Enter an animal:";
+                    lblAux.Text = @"Enter an animal:";
                     break;
                 case 3:
-                    lblAux.Text = "Enter an animal:";
+                    lblAux.Text = @"Enter an animal:";
                     break;
                 case 4:
-                    lblAux.Text = "Enter a animal:";
+                    lblAux.Text = @"Enter an animal:";
                     break;
             }
         }
@@ -93,5 +95,37 @@ namespace WildFinder
         {
 
         }
+
+        private void btnAddAnimal_Click(object sender, EventArgs e)
+        {
+            var animal = txtAnimalName.Text.ToLower();
+            var animalClass = txtClass.Text.ToLower();
+            var habitat = txtHabitat.Text.ToLower();
+            var biome = txtBiome.Text.ToLower();
+            var load = new PlQuery("load('Animals.bd')");
+
+            try
+            {
+                load.NextSolution();
+
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine(exception.StackTrace);
+            }
+
+            if (txtAnimalName.Text.Length != 0 &&
+                txtClass.Text.Length != 0 &&
+                txtHabitat.Text.Length != 0 &&
+                txtBiome.Text.Length != 0)
+            {
+               
+                PlQuery.PlCall("assert(animal_habitat(" + animal + "," + habitat + ")");
+                PlQuery.PlCall("assert(animal_biome(" + animal + "," + biome + ")");
+                PlQuery.PlCall("assert(animal_class(" + animal + "," + animalClass + ")");
+                
+            }
+        }
+
     }
 }

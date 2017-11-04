@@ -756,6 +756,11 @@ biomes_of_animal(Animal, Biome):-
 major_enemies(Animal, Enemy):-
 	animal_enemy(Animal, Enemy).
 
-live_together(Animal, Biome, Animal2):-
-	biomes_of_animal(Animal,Biome),
-	biomes_of_animal(Animal2,Biome).
+live_together(AnimalA, AnimalB):-
+	biomes_of_animal(AnimalA,Biome),
+	biomes_of_animal(AnimalB,Biome).
+
+add_animal(Animal, Habitat, Biome, Class):-
+	assert(animal_habitat(Animal,Habitat)),
+	assert(animal_biome(Animal,Biome)),
+	assert(animal_class(Animal,Class)).
