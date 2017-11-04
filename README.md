@@ -1,4 +1,4 @@
-# WildFinder#
+# WildFinder #
 
 Programa creado con la finalidad de simular un sistema experto en animales
 
