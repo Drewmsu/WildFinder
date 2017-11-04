@@ -69,6 +69,28 @@ namespace WildFinder
 
         private void cbInferencias_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (cbInferencias.SelectedIndex)
+            {
+                case 0:
+                    lblAux.Text = "Enter a habitat:";
+                    break;
+                case 1:
+                    lblAux.Text = "Enter a habitat:";
+                    break;
+                case 2:
+                    lblAux.Text = "Enter an animal:";
+                    break;
+                case 3:
+                    lblAux.Text = "Enter an animal:";
+                    break;
+                case 4:
+                    lblAux.Text = "Enter a animal:";
+                    break;
+            }
+        }
+
+        private void lblObjective_Click(object sender, EventArgs e)
+        {
 
         }
     }

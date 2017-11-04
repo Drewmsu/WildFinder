@@ -38,7 +38,7 @@
             this.tabFinder = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblObjective = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAux = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabFinder.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.btnConsult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsult.Image = ((System.Drawing.Image)(resources.GetObject("btnConsult.Image")));
             this.btnConsult.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsult.Location = new System.Drawing.Point(6, 310);
+            this.btnConsult.Location = new System.Drawing.Point(6, 355);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(109, 36);
             this.btnConsult.TabIndex = 55;
@@ -62,7 +62,7 @@
             this.tbInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbInput.Location = new System.Drawing.Point(126, 47);
+            this.tbInput.Location = new System.Drawing.Point(152, 47);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(178, 20);
             this.tbInput.TabIndex = 54;
@@ -72,10 +72,13 @@
             this.lbConsult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbConsult.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lbConsult.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConsult.FormattingEnabled = true;
+            this.lbConsult.ItemHeight = 18;
             this.lbConsult.Location = new System.Drawing.Point(6, 73);
             this.lbConsult.Name = "lbConsult";
-            this.lbConsult.Size = new System.Drawing.Size(746, 225);
+            this.lbConsult.Size = new System.Drawing.Size(746, 256);
             this.lbConsult.TabIndex = 53;
             // 
             // lblTitle
@@ -84,11 +87,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Orange;
             this.lblTitle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblTitle.Location = new System.Drawing.Point(297, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(196, 32);
+            this.lblTitle.Size = new System.Drawing.Size(180, 32);
             this.lblTitle.TabIndex = 50;
             this.lblTitle.Text = "WILD FINDER";
             // 
@@ -104,7 +108,7 @@
             "Biomes of animal",
             "Enemy of animal",
             "Possible cohabitants of"});
-            this.cbInferencias.Location = new System.Drawing.Point(126, 20);
+            this.cbInferencias.Location = new System.Drawing.Point(152, 20);
             this.cbInferencias.Name = "cbInferencias";
             this.cbInferencias.Size = new System.Drawing.Size(178, 21);
             this.cbInferencias.TabIndex = 56;
@@ -120,12 +124,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 42);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(766, 378);
+            this.tabControl1.Size = new System.Drawing.Size(766, 423);
             this.tabControl1.TabIndex = 57;
             // 
             // tabFinder
             // 
-            this.tabFinder.Controls.Add(this.label1);
+            this.tabFinder.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabFinder.Controls.Add(this.lblAux);
             this.tabFinder.Controls.Add(this.lblObjective);
             this.tabFinder.Controls.Add(this.cbInferencias);
             this.tabFinder.Controls.Add(this.btnConsult);
@@ -134,10 +139,9 @@
             this.tabFinder.Location = new System.Drawing.Point(4, 22);
             this.tabFinder.Name = "tabFinder";
             this.tabFinder.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFinder.Size = new System.Drawing.Size(758, 352);
+            this.tabFinder.Size = new System.Drawing.Size(758, 397);
             this.tabFinder.TabIndex = 0;
             this.tabFinder.Text = "Finder";
-            this.tabFinder.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -155,29 +159,33 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblObjective.AutoSize = true;
+            this.lblObjective.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObjective.Location = new System.Drawing.Point(6, 23);
             this.lblObjective.Name = "lblObjective";
-            this.lblObjective.Size = new System.Drawing.Size(95, 13);
+            this.lblObjective.Size = new System.Drawing.Size(140, 14);
             this.lblObjective.TabIndex = 58;
             this.lblObjective.Text = "Select an objetive:";
+            this.lblObjective.Click += new System.EventHandler(this.lblObjective_Click);
             // 
-            // label1
+            // lblAux
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblAux.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Select an objetive:";
+            this.lblAux.AutoSize = true;
+            this.lblAux.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAux.Location = new System.Drawing.Point(6, 47);
+            this.lblAux.Name = "lblAux";
+            this.lblAux.Size = new System.Drawing.Size(28, 14);
+            this.lblAux.TabIndex = 59;
+            this.lblAux.Text = "Aux";
             // 
             // AnimalsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 429);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(781, 474);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitle);
             this.Name = "AnimalsForm";
@@ -200,7 +208,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabFinder;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAux;
         private System.Windows.Forms.Label lblObjective;
     }
 }
