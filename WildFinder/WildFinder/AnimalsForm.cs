@@ -15,6 +15,10 @@ namespace WildFinder
         private void AnimalsForm_Load(object sender, EventArgs e)
         {
             cbInferencias.SelectedIndex = 0;
+            cmb_habitat_finder2.SelectedIndex = 0;
+            cmb_foodtype_finder2.SelectedIndex = 0;
+            cmb_development_finder2.SelectedIndex = 0;
+            cmb_class_finder2.SelectedIndex = 0;
             Environment.SetEnvironmentVariable("Path", @"C:\\Program Files (x86)\\swipl\\bin");
             String[] p = { "-q", "-f", @"Animals.pl" };
             PlEngine.Initialize(p);
@@ -162,6 +166,29 @@ namespace WildFinder
                     Debug.WriteLine(exception.StackTrace);
                 }
             }
+        }
+
+        private void btn_consult_finder2_Click(object sender, EventArgs e)
+        {
+            var animalClass = cmb_class_finder2.Text.ToLower();
+            var habitat = cmb_habitat_finder2.Text.ToLower();
+            var foodtype = cmb_foodtype_finder2.Text.ToLower();
+            var development = cmb_development_finder2.Text.ToLower(); 
+            var load = new PlQuery("load('Animals.bd')");
+
+            try
+            {
+                load.NextSolution();
+
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine(exception.StackTrace);
+            }
+
+            PlQuery query = new PlQuery("search_animal(" + animalClass + "," + habitat + "," + foodtype + "," + development + ",Animal)");
+            foreach (var q in query.SolutionVariables)
+                lst_finder2.Items.Add(q["Animal"].ToString());
         }
     }
 }

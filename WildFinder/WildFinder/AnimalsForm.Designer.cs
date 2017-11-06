@@ -56,6 +56,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtExistingAnimal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabPageFinder2 = new System.Windows.Forms.TabPage();
+            this.btn_consult_finder2 = new System.Windows.Forms.Button();
+            this.lst_finder2 = new System.Windows.Forms.ListBox();
+            this.cmb_development_finder2 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmb_foodtype_finder2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmb_class_finder2 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmb_habitat_finder2 = new System.Windows.Forms.ComboBox();
+            this.lbl_habitat_finder2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageFinder.SuspendLayout();
             this.tabPageAdd.SuspendLayout();
@@ -63,6 +74,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tabPageFinder2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConsult
@@ -94,13 +106,13 @@
             this.lbConsult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbConsult.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lbConsult.BackColor = System.Drawing.SystemColors.Control;
             this.lbConsult.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConsult.FormattingEnabled = true;
             this.lbConsult.ItemHeight = 18;
             this.lbConsult.Location = new System.Drawing.Point(6, 73);
             this.lbConsult.Name = "lbConsult";
-            this.lbConsult.Size = new System.Drawing.Size(674, 220);
+            this.lbConsult.Size = new System.Drawing.Size(674, 202);
             this.lbConsult.TabIndex = 2;
             // 
             // lblTitle
@@ -144,6 +156,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPageFinder);
             this.tabControl1.Controls.Add(this.tabPageAdd);
+            this.tabControl1.Controls.Add(this.tabPageFinder2);
             this.tabControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 44);
             this.tabControl1.Name = "tabControl1";
@@ -163,8 +176,8 @@
             this.tabPageFinder.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageFinder.Location = new System.Drawing.Point(4, 22);
             this.tabPageFinder.Name = "tabPageFinder";
-            this.tabPageFinder.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageFinder.Size = new System.Drawing.Size(686, 369);
+            this.tabPageFinder.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFinder.Size = new System.Drawing.Size(690, 369);
             this.tabPageFinder.TabIndex = 0;
             this.tabPageFinder.Text = "Finder";
             // 
@@ -201,7 +214,7 @@
             this.tabPageAdd.Controls.Add(this.splitContainer1);
             this.tabPageAdd.Location = new System.Drawing.Point(4, 22);
             this.tabPageAdd.Name = "tabPageAdd";
-            this.tabPageAdd.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageAdd.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageAdd.Size = new System.Drawing.Size(690, 369);
             this.tabPageAdd.TabIndex = 1;
             this.tabPageAdd.Text = "Tasks";
@@ -235,7 +248,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtExistingAnimal);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Size = new System.Drawing.Size(684, 363);
-            this.splitContainer1.SplitterDistance = 187;
+            this.splitContainer1.SplitterDistance = 186;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnAddAnimal
@@ -244,7 +257,7 @@
             this.btnAddAnimal.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAnimal.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAnimal.Image")));
             this.btnAddAnimal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAnimal.Location = new System.Drawing.Point(568, 149);
+            this.btnAddAnimal.Location = new System.Drawing.Point(568, 148);
             this.btnAddAnimal.Name = "btnAddAnimal";
             this.btnAddAnimal.Size = new System.Drawing.Size(109, 36);
             this.btnAddAnimal.TabIndex = 4;
@@ -359,7 +372,7 @@
             this.btnAddEnemy.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEnemy.Image = ((System.Drawing.Image)(resources.GetObject("btnAddEnemy.Image")));
             this.btnAddEnemy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEnemy.Location = new System.Drawing.Point(568, 133);
+            this.btnAddEnemy.Location = new System.Drawing.Point(568, 132);
             this.btnAddEnemy.Name = "btnAddEnemy";
             this.btnAddEnemy.Size = new System.Drawing.Size(109, 36);
             this.btnAddEnemy.TabIndex = 2;
@@ -426,6 +439,176 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Add an enemy to an existing animal";
             // 
+            // tabPageFinder2
+            // 
+            this.tabPageFinder2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPageFinder2.Controls.Add(this.btn_consult_finder2);
+            this.tabPageFinder2.Controls.Add(this.lst_finder2);
+            this.tabPageFinder2.Controls.Add(this.cmb_development_finder2);
+            this.tabPageFinder2.Controls.Add(this.label11);
+            this.tabPageFinder2.Controls.Add(this.cmb_foodtype_finder2);
+            this.tabPageFinder2.Controls.Add(this.label10);
+            this.tabPageFinder2.Controls.Add(this.cmb_class_finder2);
+            this.tabPageFinder2.Controls.Add(this.label9);
+            this.tabPageFinder2.Controls.Add(this.cmb_habitat_finder2);
+            this.tabPageFinder2.Controls.Add(this.lbl_habitat_finder2);
+            this.tabPageFinder2.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFinder2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageFinder2.Name = "tabPageFinder2";
+            this.tabPageFinder2.Size = new System.Drawing.Size(690, 369);
+            this.tabPageFinder2.TabIndex = 2;
+            this.tabPageFinder2.Text = "Finder2";
+            // 
+            // btn_consult_finder2
+            // 
+            this.btn_consult_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_consult_finder2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consult_finder2.Image = ((System.Drawing.Image)(resources.GetObject("btn_consult_finder2.Image")));
+            this.btn_consult_finder2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_consult_finder2.Location = new System.Drawing.Point(575, 330);
+            this.btn_consult_finder2.Name = "btn_consult_finder2";
+            this.btn_consult_finder2.Size = new System.Drawing.Size(109, 36);
+            this.btn_consult_finder2.TabIndex = 70;
+            this.btn_consult_finder2.Text = "Consult";
+            this.btn_consult_finder2.UseVisualStyleBackColor = true;
+            this.btn_consult_finder2.Click += new System.EventHandler(this.btn_consult_finder2_Click);
+            // 
+            // lst_finder2
+            // 
+            this.lst_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lst_finder2.BackColor = System.Drawing.SystemColors.Control;
+            this.lst_finder2.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lst_finder2.FormattingEnabled = true;
+            this.lst_finder2.ItemHeight = 18;
+            this.lst_finder2.Location = new System.Drawing.Point(10, 102);
+            this.lst_finder2.Name = "lst_finder2";
+            this.lst_finder2.Size = new System.Drawing.Size(674, 202);
+            this.lst_finder2.TabIndex = 69;
+            // 
+            // cmb_development_finder2
+            // 
+            this.cmb_development_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_development_finder2.FormattingEnabled = true;
+            this.cmb_development_finder2.Items.AddRange(new object[] {
+            "_",
+            "oviparous",
+            "ovoviviparous",
+            "viviparous"});
+            this.cmb_development_finder2.Location = new System.Drawing.Point(478, 66);
+            this.cmb_development_finder2.Name = "cmb_development_finder2";
+            this.cmb_development_finder2.Size = new System.Drawing.Size(131, 21);
+            this.cmb_development_finder2.TabIndex = 68;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(388, 67);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 14);
+            this.label11.TabIndex = 67;
+            this.label11.Text = "Development";
+            // 
+            // cmb_foodtype_finder2
+            // 
+            this.cmb_foodtype_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_foodtype_finder2.FormattingEnabled = true;
+            this.cmb_foodtype_finder2.Items.AddRange(new object[] {
+            "_",
+            "carnivore",
+            "herbivore",
+            "insectivore",
+            "omnivore"});
+            this.cmb_foodtype_finder2.Location = new System.Drawing.Point(478, 26);
+            this.cmb_foodtype_finder2.Name = "cmb_foodtype_finder2";
+            this.cmb_foodtype_finder2.Size = new System.Drawing.Size(131, 21);
+            this.cmb_foodtype_finder2.TabIndex = 66;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(388, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 14);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "Food Type";
+            // 
+            // cmb_class_finder2
+            // 
+            this.cmb_class_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_class_finder2.FormattingEnabled = true;
+            this.cmb_class_finder2.Items.AddRange(new object[] {
+            "_",
+            "amphibia",
+            "aves",
+            "chondrichthyea",
+            "cyclostomata",
+            "elasmobranchii",
+            "mammalia",
+            "osteichthyes",
+            "reptilia"});
+            this.cmb_class_finder2.Location = new System.Drawing.Point(164, 66);
+            this.cmb_class_finder2.Name = "cmb_class_finder2";
+            this.cmb_class_finder2.Size = new System.Drawing.Size(131, 21);
+            this.cmb_class_finder2.TabIndex = 64;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(96, 67);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 14);
+            this.label9.TabIndex = 63;
+            this.label9.Text = "Class";
+            // 
+            // cmb_habitat_finder2
+            // 
+            this.cmb_habitat_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_habitat_finder2.FormattingEnabled = true;
+            this.cmb_habitat_finder2.Items.AddRange(new object[] {
+            "_",
+            "terrestrial",
+            "aquatic",
+            "marine"});
+            this.cmb_habitat_finder2.Location = new System.Drawing.Point(164, 27);
+            this.cmb_habitat_finder2.Name = "cmb_habitat_finder2";
+            this.cmb_habitat_finder2.Size = new System.Drawing.Size(131, 21);
+            this.cmb_habitat_finder2.TabIndex = 62;
+            // 
+            // lbl_habitat_finder2
+            // 
+            this.lbl_habitat_finder2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_habitat_finder2.AutoSize = true;
+            this.lbl_habitat_finder2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_habitat_finder2.Location = new System.Drawing.Point(96, 28);
+            this.lbl_habitat_finder2.Name = "lbl_habitat_finder2";
+            this.lbl_habitat_finder2.Size = new System.Drawing.Size(56, 14);
+            this.lbl_habitat_finder2.TabIndex = 61;
+            this.lbl_habitat_finder2.Text = "Habitat";
+            // 
             // AnimalsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +632,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tabPageFinder2.ResumeLayout(false);
+            this.tabPageFinder2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,6 +667,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtExistingAnimal;
         private System.Windows.Forms.Button btnAddEnemy;
+        private System.Windows.Forms.TabPage tabPageFinder2;
+        private System.Windows.Forms.ComboBox cmb_habitat_finder2;
+        private System.Windows.Forms.Label lbl_habitat_finder2;
+        private System.Windows.Forms.ComboBox cmb_foodtype_finder2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cmb_class_finder2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmb_development_finder2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_consult_finder2;
+        private System.Windows.Forms.ListBox lst_finder2;
     }
 }
 
