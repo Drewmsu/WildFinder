@@ -29,6 +29,7 @@ namespace WildFinder
             var value = tbInput.Text.ToLower();
             lbConsult.Items.Clear();
             var load = new PlQuery("load('Animals.bd')");
+
             try
             {
                 load.NextSolution();
@@ -38,6 +39,7 @@ namespace WildFinder
             {
                 Debug.WriteLine(exception.StackTrace);
             }
+
             if (tbInput.Text.Length != 0)
             {
                 PlQuery query;
@@ -70,7 +72,6 @@ namespace WildFinder
                         break;
                 }
             }
-
         }
 
         private void cbInferencias_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,10 +171,10 @@ namespace WildFinder
 
         private void btn_consult_finder2_Click(object sender, EventArgs e)
         {
-            var animalClass = cmb_class_finder2.Text.ToLower();
-            var habitat = cmb_habitat_finder2.Text.ToLower();
-            var foodtype = cmb_foodtype_finder2.Text.ToLower();
-            var development = cmb_development_finder2.Text.ToLower(); 
+            var animalClass = cmb_class_finder2.SelectedItem.ToString().ToLower();
+            var habitat = cmb_habitat_finder2.SelectedItem.ToString().ToLower();
+            var foodtype = cmb_foodtype_finder2.SelectedItem.ToString().ToLower();
+            var development = cmb_development_finder2.SelectedItem.ToString().ToLower();
             var load = new PlQuery("load('Animals.bd')");
 
             try
@@ -186,9 +187,17 @@ namespace WildFinder
                 Debug.WriteLine(exception.StackTrace);
             }
 
-            PlQuery query = new PlQuery("search_animal(" + animalClass + "," + habitat + "," + foodtype + "," + development + ",Animal)");
-            foreach (var q in query.SolutionVariables)
-                lst_finder2.Items.Add(q["Animal"].ToString());
+            try
+            {
+                PlQuery query = new PlQuery("search_animal(" + animalClass + "," + habitat + "," + foodtype + "," +
+                                            development + ",Animal)");
+                foreach (var q in query.SolutionVariables)
+                    lst_finder2.Items.Add(q["Animal"].ToString());
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine(exception.StackTrace);
+            }
         }
     }
 }

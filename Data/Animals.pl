@@ -1050,7 +1050,7 @@ live_together(AnimalA,AnimalB):-
 	biomes_of_animal(AnimalA,Biome),
 	biomes_of_animal(AnimalB,Biome).
 
-search_animal(Class,Habitat,Foodtype,Development, Animal):-
+search_animal(Class,Habitat,Foodtype,Development,Animal):-
 	animal_class(Animal,Class),
 	animal_habitat(Animal,Habitat),
 	animal_foodtype(Animal,Foodtype),
