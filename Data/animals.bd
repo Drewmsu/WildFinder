@@ -1036,9 +1036,9 @@ details_animal(Animal):-
 	write('The animal '),ansi_format(bold,Animal,[]),writeln(': '),
 	write('	is part of the class '),ansi_format(underline,Class,[]),writeln('. '),
 	write('	It is '),write(Habitat),writeln('. '),
-	write('	It lives in '),write(Biome),writeln('. '),
+	write('	lives in '),write(Biome),writeln('. '),
 	write('	It is '),write(Foodtype),writeln('. '),
-	write('	It also is '),write(Development),writeln('. ').
+	write('	Also it is '),write(Development),writeln('. ').
 	
 biomes_of_animal(Animal,Biome):-
 	animal_biome(Animal,Biome).
@@ -1050,21 +1050,7 @@ live_together(AnimalA,AnimalB):-
 	biomes_of_animal(AnimalA,Biome),
 	biomes_of_animal(AnimalB,Biome).
 
-search_animal(Class,Habitat):-
-	writeln('Animals founded: '),
-	animal_class(Animal,Class),
-	animal_habitat(Animal,Habitat),
-	details_animal(Animal).
-	
-search_animal(Class,Habitat,Foodtype):-
-	writeln('Animals founded: '),
-	animal_class(Animal,Class),
-	animal_habitat(Animal,Habitat),
-	animal_foodtype(Animal,Foodtype),
-	details_animal(Animal).
-
-search_animal(Class,Habitat,Foodtype,Development):-
-	writeln('Animals founded: '),
+search_animal(Class,Habitat,Foodtype,Development, Animal):-
 	animal_class(Animal,Class),
 	animal_habitat(Animal,Habitat),
 	animal_foodtype(Animal,Foodtype),
